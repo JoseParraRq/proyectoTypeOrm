@@ -15,7 +15,6 @@
   "email":"namra@admin.com",
     "password":"12345"
 
-
     para el amor de mi  vida te amo
 
 https://es.stackoverflow.com/questions/404038/no-puedo-borrar-mi-usuario-de-git#:~:text=Para%20cambiar%20en%20Git%20el,git%20config%20%5B%2D%2Dglobal%5D%20user.
