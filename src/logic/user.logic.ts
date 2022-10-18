@@ -60,7 +60,15 @@ export class UserLogic extends User {
             if (userEmail === undefined || !userEmail) {
                 throw ErrorFactory.getNotFoundError("this email is invalid");
             }
+            
+            /*const bcrypts = await bc.hashSync(params.password, 8)
+            userEmail.password = bcrypts;   solo para el primer usuario admin
+            console.log("here the bcrupoyttss",bcrypts);
+            */
+
             let compare = await bc.compareSync(params.password, userEmail.password);
+           console.log("here the compare",compare);
+           
             if (compare) {
                 token = await jwt.sign({ userEmail }, process.env.TOKEN || 'secret', {
                     expiresIn: 120
