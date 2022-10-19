@@ -3,7 +3,10 @@ import { UserController } from "../controller/user.controller";
 import {middlewareJwt, middlewareUserType} from "../middleware/middleware.api";
 const router = Router();
 
+
 router.post("/login",UserController.login);
+//router.get("/user",middlewareJwt,UserController.getUserById);
+router.get("/user",UserController.getUserById);
 router.post("/createUser", middlewareJwt,middlewareUserType,UserController.createUser);
 router.post("/getUserById",middlewareJwt,UserController.getUserById);
 router.get("/getAllUsers",middlewareJwt,UserController.getAllUsers);
