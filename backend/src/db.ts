@@ -5,9 +5,7 @@ import { Product } from "./entities/product.entities";
 import { User } from "./entities/user.entities";
 import { UserType } from "./entities/userType.entities";
 
-// const connection = await createConnection({
 
-// })
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: process.env.LOCALHOST,
